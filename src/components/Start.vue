@@ -22,7 +22,7 @@
   </div>
   <br />
   <div class="cards">
-    <router-link to="/Students" class="router">
+    <router-link to="/Student" class="router">
       <div class="card1">
         <FontAwesomeIcon :icon="faGraduationCap" style="font-size: 40px" />
         <h1>Student</h1>
@@ -72,8 +72,6 @@ onMounted(() => {
       threshold: 1,
     },
   )
-  const cards = document.querySelector('.cards')
-  cards.forEach((el) => observer.observe(el))
 })
 
 onUnmounted(() => {

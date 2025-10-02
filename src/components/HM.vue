@@ -1,0 +1,171 @@
+<template>
+  <div class="profile">
+    <div class="empty"></div>
+    <h1>World Mission High School (HM)</h1>
+    <p>Kigali, Rwanda</p>
+  </div>
+  <div class="body">
+    <div class="nav">
+      <div class="image">
+        <img src="/src/assets/sgms-high-resolution-logo.png" alt="SMGSlogo" />
+      </div>
+      <div class="links">
+        <router-link to="/" class="router-link"
+          ><FontAwesomeIcon :icon="faHome" /> Home</router-link
+        >
+        <router-link to="/Teachers" class="router-link"
+          ><FontAwesomeIcon :icon="faChalkboardTeacher" /> Teachers</router-link
+        >
+        <router-link to="/Student" class="router-link"
+          ><FontAwesomeIcon :icon="faGraduationCap" /> Student</router-link
+        >
+        <router-link to="/Admin" class="router-link"
+          ><FontAwesomeIcon :icon="faMicrochip" /> Admin</router-link
+        >
+      </div>
+    </div>
+    <div class="info">
+      <div class="students">
+        <h1>
+          <FontAwesomeIcon :icon="faGraduationCap" />
+          <p>Students</p>
+          <h1>456</h1>
+          <p>Ongoing...</p>
+        </h1>
+      </div>
+      <div class="students">
+        <h1>
+          <FontAwesomeIcon :icon="faHand" />
+          <p>Absence/Presence ration</p>
+          <router-link to="/Mentron" class="routes"><h1>80-90</h1></router-link>
+          <p>7:30 A.M</p>
+        </h1>
+      </div>
+      <div class="students">
+        <h1>
+          <FontAwesomeIcon :icon="faClock" />
+          <p>Schedule</p>
+          <h1>Learning Time</h1>
+          <p>8:30 A.M</p>
+        </h1>
+      </div>
+      <div class="students">
+        <h1>
+          <FontAwesomeIcon :icon="faBullhorn" />
+          <p>Announcements</p>
+          <h1>Sports meeting</h1>
+          <p>Pending...</p>
+        </h1>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup>
+import { faBullhorn, faChalkboardTeacher, faClock, faHand } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { faMicrochip } from '@fortawesome/free-solid-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+</script>
+<style>
+.body {
+  width: 200vh;
+  height: 100vh;
+  background: white;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: fit-content;
+  width: 100vw;
+  top: 18%;
+}
+.routes {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  padding: 0 20px;
+  box-sizing: border-box;
+  height: fit-content;
+  width: 100vw;
+  height: 10vw;
+}
+.profile > h1 {
+  top: -15%;
+  left: 1%;
+  font-weight: bold;
+  position: relative;
+  color: white;
+}
+.profile p {
+  position: absolute;
+  top: 60%;
+  left: 7.5%;
+  color: rgb(215, 211, 211);
+}
+.empty {
+  border-radius: 100%;
+  width: 5vw;
+  height: 5vw;
+  background: white;
+}
+.info {
+  display: flex;
+  width: fit-content;
+  position: absolute;
+  top: 45%;
+  gap: 1%;
+}
+.students {
+  border-radius: 11px;
+  padding: 35px;
+  top: 45%;
+  left: 5%;
+  width: 25vw;
+  height: 16vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background: rgb(246, 241, 241);
+  color: black;
+}
+.students:nth-child(1) {
+  box-shadow: 1px 1px 49px rgb(156, 155, 155);
+}
+.students:nth-child(2) {
+  box-shadow: 1px 1px 49px rgb(156, 155, 155);
+  left: 33%;
+}
+.students:nth-child(3) {
+  box-shadow: 0px 0px 49px rgb(156, 155, 155);
+  left: 59%;
+}
+.students:nth-child(4) {
+  box-shadow: 1px 1px 49px rgb(156, 155, 155);
+  left: 59%;
+}
+.students h1:nth-child(3) {
+  font-size: 40px;
+}
+.students p {
+  color: rgb(55, 55, 55);
+  font-size: 25px;
+}
+</style>

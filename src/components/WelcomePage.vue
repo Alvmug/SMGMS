@@ -110,7 +110,7 @@ import { faMicrochip } from '@fortawesome/free-solid-svg-icons'
 </script>
 <style>
 body {
-  background: rgb(11, 11, 11);
+  background: rgb(0, 0, 0);
   font-family:
     ui-sans-serif,
     system-ui,
@@ -128,7 +128,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 15%;
+  left: 12%;
   position: absolute;
   top: 30%;
   font-family: 'Roboto', sans-serif;
@@ -286,7 +286,7 @@ body {
   font-style: italic;
   position: absolute;
   left: 5%;
-  top: 65%;
+  top: 75%;
   font-size: 19px;
   color: whitesmoke;
   opacity: 75%;
@@ -299,7 +299,7 @@ body {
 .join {
   position: absolute;
   font-size: 30px;
-  top: 20vw;
+  top: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
