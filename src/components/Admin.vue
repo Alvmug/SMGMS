@@ -89,8 +89,8 @@ onBeforeMount(() => {
       text: 'Access Granted, transmitting to portal...',
       color: 'white',
       background: '#1a1a1a',
+      radius: '12px',
     })
-    // Component continues loading
   }
 })
 

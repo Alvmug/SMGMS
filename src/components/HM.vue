@@ -58,6 +58,18 @@
         </h1>
       </div>
     </div>
+    <br />
+    <div class="box1">
+      <h1>Teaching Schedule</h1>
+    </div>
+    <div class="box1">
+      <h1>Teaching Schedule</h1>
+    </div>
+    <div class="box1">
+      <h1><FontAwesomeIcon :icon="faClock" class="clock" /> Teaching Schedule</h1>
+      <div class="null"></div>
+      <div class="Level"><h1>L3MMP</h1></div>
+    </div>
   </div>
 </template>
 <script setup>
@@ -70,7 +82,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 <style>
 .body {
   width: 200vh;
-  height: 100vh;
+  height: 300vh;
   background: white;
 }
 .nav {
@@ -167,5 +179,59 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 .students p {
   color: rgb(55, 55, 55);
   font-size: 25px;
+}
+.box1 {
+  display: flex;
+  position: absolute;
+  width: 35rem;
+  height: 19rem;
+  background: rgb(246, 241, 241);
+  top: 90%;
+  left: 1%;
+  border-radius: 12px;
+  box-shadow: 1px 1px 49px rgb(156, 155, 155);
+  transition: 0.3s ease-in-out;
+}
+.box1 > h1 {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  font-weight: 450;
+  opacity: 75%;
+  font-size: 25px;
+  color: black;
+}
+.box1:nth-child(4) {
+  left: 75%;
+  width: 30rem;
+}
+.box1:nth-child(5) {
+  left: 40%;
+  width: 30rem;
+}
+.box1:hover {
+  transform: translateY(-5%);
+}
+.clock {
+  position: relative;
+  left: 150%;
+  opacity: 100%;
+  color: black;
+  font-size: 40px;
+}
+.null {
+  width: 0.4em;
+  position: absolute;
+  border-radius: 5px;
+  top: 30%;
+  left: 10%;
+  height: 9em;
+  background: rgb(21, 21, 21);
+}
+.Level {
+  color: black;
+  position: relative;
+  top: 30%;
+  left: 15%;
 }
 </style>

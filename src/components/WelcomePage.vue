@@ -110,7 +110,7 @@ import { faMicrochip } from '@fortawesome/free-solid-svg-icons'
 </script>
 <style>
 body {
-  background: rgb(0, 0, 0);
+  background: rgb(5, 5, 5);
   font-family:
     ui-sans-serif,
     system-ui,
@@ -408,6 +408,6 @@ body {
 }
 .router-link-active {
   background-color: rgb(24, 23, 23);
-  box-shadow: 0px 3px 1px white;
+  box-shadow: -4px 2px 1px white;
 }
 </style>
