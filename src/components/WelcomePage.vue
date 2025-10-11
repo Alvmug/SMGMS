@@ -86,7 +86,7 @@ onMounted(() => {
       })
     },
     {
-      threshold: 1,
+      threshold: 0.5,
     },
   )
   const description = document.querySelectorAll('.desc')
@@ -128,7 +128,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 12%;
+  left: 16%;
   position: absolute;
   top: 30%;
   font-family: 'Roboto', sans-serif;
@@ -137,7 +137,6 @@ body {
   color: rgb(255, 255, 255);
   flex-direction: column;
   opacity: 0;
-  transform: translateX(5%);
   transition: 1.4s ease;
 }
 .add.show {
@@ -409,5 +408,36 @@ body {
 .router-link-active {
   background-color: rgb(24, 23, 23);
   box-shadow: -4px 2px 1px white;
+}
+/*Media Queries: */
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 10vw;
+  }
+  .navbar img {
+    font-size: 16px;
+    width: 100px;
+    height: 100px;
+  }
+  .links {
+    font-size: 12px;
+  }
+  .add {
+    font-size: 13px;
+    width: 500px;
+    left: -19%;
+  }
+  .add p {
+    position: relative;
+    font-size: 15px;
+    left: 3%;
+    width: 250px;
+  }
+  .add .register {
+    height: 2em;
+    width: 7.5em;
+    font-size: 20px;
+  }
 }
 </style>

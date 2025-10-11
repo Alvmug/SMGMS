@@ -60,10 +60,43 @@
     </div>
     <br />
     <div class="box1">
-      <h1>Teaching Schedule</h1>
+      <h1>Overall Discipline <FontAwesomeIcon :icon="faBrain" /></h1>
+      <div class="discipline">
+        <h1>Estimation:</h1>
+        <div class="scale">
+          <h1>87%</h1>
+          <div class="Bad">
+            <h1>Bad (40%)</h1>
+            <hr />
+          </div>
+          <hr />
+          <div class="good">
+            <h1>Good (47%)</h1>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="box1">
-      <h1>Teaching Schedule</h1>
+      <h1><FontAwesomeIcon :icon="faStickyNote" class="Sticky" /> Admission requests</h1>
+      <div class="request">
+        <h1>🧑‍💻 John Doe - <span>L3NIT-B</span></h1>
+        <hr
+          style="
+            width: 250px;
+            background-color: black;
+            padding: 3px;
+            border-radius: 12px;
+            margin-left: -50%;
+          "
+        />
+        <br />
+        <h1 class="enroll">
+          - Recently studied at KCS. <br />
+          - Would like to enroll for a place in NIT. <br />
+          - Highly passionate in networking fields. <br />
+          - Adept in linux.
+        </h1>
+      </div>
     </div>
     <div class="box1">
       <h1><FontAwesomeIcon :icon="faClock" class="clock" /> Teaching Schedule</h1>
@@ -88,10 +121,27 @@
         </div>
       </div>
     </div>
+    <div class="Sudo">
+      <h1>
+        <a href="https://www.worldmissionhighschool.org/index"
+          >"Visionary Minds Create Insightful Innovations"
+        </a>
+      </h1>
+    </div>
+    <div class="principal">
+      <img src="/src/assets/Principal.png" alt="" />
+    </div>
   </div>
 </template>
 <script setup>
-import { faBullhorn, faChalkboardTeacher, faClock, faHand } from '@fortawesome/free-solid-svg-icons'
+import {
+  faBrain,
+  faBullhorn,
+  faChalkboardTeacher,
+  faClock,
+  faHand,
+  faStickyNote,
+} from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faMicrochip } from '@fortawesome/free-solid-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
@@ -135,6 +185,7 @@ onUnmounted(() => {
   height: fit-content;
   width: 100vw;
   top: 18%;
+  z-index: 1000;
 }
 .nav.scrolled {
   box-shadow: 0px 6px 4px rgb(6, 6, 6);
@@ -158,6 +209,7 @@ onUnmounted(() => {
   height: fit-content;
   width: 100vw;
   height: 10vw;
+  z-index: 1000;
 }
 .profile > h1 {
   top: -15%;
@@ -204,7 +256,6 @@ onUnmounted(() => {
 }
 .students:nth-child(2) {
   box-shadow: 4px 5px 30px rgb(190, 190, 190);
-  left: 33%;
 }
 .students:nth-child(3) {
   box-shadow: 4px 5px 30px rgb(190, 190, 190);
@@ -238,20 +289,51 @@ onUnmounted(() => {
   top: 10%;
   left: 2%;
   font-weight: 450;
-
   font-size: 25px;
   color: black;
 }
 .box1:nth-child(4) {
   left: 75%;
+  display: flex;
+  justify-content: center;
   width: 30rem;
 }
 .box1:nth-child(5) {
   left: 40%;
+  display: flex;
+  justify-content: center;
   width: 30rem;
+}
+.box1:nth-child(5) > h1 {
+  left: 5%;
+}
+.Sticky {
+  position: relative;
+  left: 160%;
 }
 .box1:hover {
   transform: translateY(-5%);
+  background: rgba(163, 163, 163, 0.374);
+  color: whitesmoke;
+}
+.request {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 420px;
+}
+.request > h1 {
+  color: rgb(8, 8, 8);
+  font-weight: 450;
+  font-weight: 500;
+  padding: 5px;
+  margin-top: -20%;
+}
+.request > .enroll {
+  top: 90%;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
 }
 .clock {
   position: relative;
@@ -317,5 +399,92 @@ onUnmounted(() => {
   padding: 3px;
   background: rgb(22, 107, 255);
   border-radius: 12px;
+}
+.Sudo {
+  width: 65rem;
+  height: 10rem;
+  background-color: black;
+  position: absolute;
+  top: 160%;
+  left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  border-radius: 12px;
+  flex-direction: row;
+  color: white;
+  font-style: italic;
+}
+.Sudo a {
+  text-decoration: none;
+  color: rgb(151, 147, 147);
+  transition: 0.5s ease;
+
+  padding: 4px;
+}
+.Sudo a:hover {
+  color: white;
+}
+.principal {
+  position: absolute;
+  top: 150%;
+  left: 70%;
+}
+.principal img {
+  width: 450px;
+  height: 350px;
+  padding: 1px;
+}
+.discipline {
+  color: black;
+  display: flex;
+}
+.discipline h1 {
+  margin-left: -110%;
+  margin-top: 60%;
+}
+.scale {
+  position: absolute;
+  top: 20%;
+  font-size: 35px;
+}
+.scale hr {
+  width: 300px;
+  position: absolute;
+  height: 35px;
+  background-color: black;
+  box-shadow: 1px 1px 19px rgb(156, 155, 155);
+}
+.Bad {
+  position: absolute;
+  top: 100%;
+  font-size: 35px;
+  left: -105%;
+}
+.Bad hr {
+  width: 400px;
+  position: absolute;
+  height: 35px;
+  background-color: rgb(80, 78, 78);
+}
+.Bad h1 {
+  position: absolute;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  z-index: 100;
+  width: 120px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+.good h1 {
+  position: absolute;
+
+  font-size: 20px;
+  left: 150%;
+  top: 58%;
+  color: white;
+  z-index: 100;
 }
 </style>
